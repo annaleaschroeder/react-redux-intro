@@ -1,8 +1,16 @@
 import React from "react";
-import "./App.css";
+import { ConnectedList } from "./components/List";
+import store from "./app/store";
+import { Provider } from "react-redux";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div>
+      <Provider store={store}>
+        <ConnectedList />
+      </Provider>
+    </div>
+  );
 }
 
 export default App;
